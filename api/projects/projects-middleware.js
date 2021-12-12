@@ -15,7 +15,7 @@ const checkID = (req,res,next) => {
 
 const checkBody = (req,res,next) => {
     const newProject = req.body;
-    if (!newProject.name || !newProject.description) {
+    if (!newProject.name || !newProject.description ) {
         res.status(400).json({message: "new projects require name and description"})
     } else {
         next()

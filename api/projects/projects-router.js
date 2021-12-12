@@ -36,7 +36,7 @@ router.post("/", mw.checkBody, (req,res) =>{
         })
 })
 
-router.put("/:id",mw.checkID, mw.checkBody, (req,res) => {
+router.put("/:id", mw.checkID, mw.checkBody, (req,res) => {
     Projects.update(req.params.id,req.body)
         .then(project => {
             res.status(201).json(project)
